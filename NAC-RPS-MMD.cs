@@ -12,7 +12,7 @@ public class Program
 			if (seedcheck == true) {
 				rand = new Random(seed);
 			} else {
-				Console.WriteLine("Error: not a number\nPlease input a number.");
+				Console.WriteLine("Error: not a number, or number is too large.\nPlease input a number.");
 			}
 		} while(seedcheck == false);
 		string[] moves = {"rock", "paper", "scissors"};
