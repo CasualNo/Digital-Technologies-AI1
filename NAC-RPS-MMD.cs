@@ -210,10 +210,8 @@ public class Program
 		return menu;
 	}
 	public static bool Mind(Random rand) {
-	//possible colors to input
 		string[] colours = {"!", "@", "#", "$", "%", "^"};
 		int correct = 0;
-		//The code that must be guessed
 		string[] code = {colours[rand.Next(0,5)], colours[rand.Next(0,5)], colours[rand.Next(0,5)], colours[rand.Next(0,5)]};
 		string input;
 		string inpart;
@@ -240,7 +238,6 @@ public class Program
 					end = true;
 					menu = true;
 				} else {
-					//checking for if the guess has invalid characters: if so, resets without removing a guess or giving information
 					for (int c = 0; c<4; c++) {
 						inpart = input.Remove(0,c);
 						if (Array.IndexOf(colours, inpart.Remove(1,3-c)) == -1) {
@@ -248,7 +245,6 @@ public class Program
 						}
 					}
 					if (ginval == false) {
-						//information
 						for (int c = 0; c<4; c++) {
 							inpart = input.Remove(0,c);
 							if (code[c] == inpart.Remove(1,3-c)) {
